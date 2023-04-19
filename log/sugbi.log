@@ -1,0 +1,96 @@
+2023-04-19 13:15:37,586 [main] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-04-19 13:15:44,580 [main] INFO  luminus.http-server - server started on port 3000 
+2023-04-19 13:15:44,582 [main] INFO  sugbi.nrepl - starting nREPL server on port 7000 
+2023-04-19 13:15:44,697 [main] INFO  sugbi.core - #'sugbi.db.core/*db* started 
+2023-04-19 13:15:44,698 [main] INFO  sugbi.core - #'sugbi.handler/init-app started 
+2023-04-19 13:15:44,699 [main] INFO  sugbi.core - #'sugbi.handler/app-routes started 
+2023-04-19 13:15:44,700 [main] INFO  sugbi.core - #'sugbi.core/http-server started 
+2023-04-19 13:15:44,701 [main] INFO  sugbi.core - #'sugbi.core/repl-server started 
+2023-04-19 13:22:03,009 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:05,247 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - creating migration table 'schema_migrations' 
+2023-04-19 13:22:07,350 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x56ea9c8a C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:07,368 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:22:07,371 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:10,734 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x3455f445 C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:10,751 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230418004535] 
+2023-04-19 13:22:10,752 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-19 13:22:10,759 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x49559aa4 org.postgresql.jdbc.PgConnection@49559aa4]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:12,045 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-19 13:22:13,889 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-19 13:22:14,662 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-19 13:22:14,663 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x49559aa4 org.postgresql.jdbc.PgConnection@49559aa4]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:15,587 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-19 13:22:16,834 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-19 13:22:17,577 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230418004535-add-lendings-table 
+2023-04-19 13:22:17,579 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x49559aa4 org.postgresql.jdbc.PgConnection@49559aa4]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:18,543 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-19 13:22:21,276 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230418004535 complete 
+2023-04-19 13:22:21,766 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:22:21,774 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:25,002 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x58ece02e C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:25,012 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Running down for [20230418004535 20230321184035 20230228002443] 
+2023-04-19 13:22:25,012 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230418004535-add-lendings-table 
+2023-04-19 13:22:25,013 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x574d2c87 org.postgresql.jdbc.PgConnection@574d2c87]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:25,994 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-19 13:22:26,167 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230418004535 not complete 
+2023-04-19 13:22:26,415 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-04-19 13:22:26,416 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x574d2c87 org.postgresql.jdbc.PgConnection@574d2c87]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:26,718 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-04-19 13:22:26,991 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-04-19 13:22:27,245 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-04-19 13:22:27,245 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x574d2c87 org.postgresql.jdbc.PgConnection@574d2c87]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:27,640 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-04-19 13:22:28,238 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-04-19 13:22:28,589 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:22:28,589 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:29,776 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x4a0ea6b8 C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:29,792 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230418004535] 
+2023-04-19 13:22:29,794 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-19 13:22:29,795 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7b1846e5 org.postgresql.jdbc.PgConnection@7b1846e5]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:30,100 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-19 13:22:30,280 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-19 13:22:30,300 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-19 13:22:30,302 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7b1846e5 org.postgresql.jdbc.PgConnection@7b1846e5]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:30,334 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-19 13:22:30,377 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-19 13:22:30,401 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230418004535-add-lendings-table 
+2023-04-19 13:22:30,402 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7b1846e5 org.postgresql.jdbc.PgConnection@7b1846e5]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:30,435 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-19 13:22:30,471 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230418004535 complete 
+2023-04-19 13:22:30,507 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:22:30,514 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:30,631 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x5684f8ad C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:30,646 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Running down for [20230418004535 20230321184035 20230228002443] 
+2023-04-19 13:22:30,646 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230418004535-add-lendings-table 
+2023-04-19 13:22:30,647 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x1067d50b org.postgresql.jdbc.PgConnection@1067d50b]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:30,707 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-19 13:22:30,740 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230418004535 not complete 
+2023-04-19 13:22:30,786 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-04-19 13:22:30,787 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x1067d50b org.postgresql.jdbc.PgConnection@1067d50b]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:30,857 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-04-19 13:22:30,947 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-04-19 13:22:30,975 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-04-19 13:22:30,976 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x1067d50b org.postgresql.jdbc.PgConnection@1067d50b]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:31,015 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-04-19 13:22:31,081 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-04-19 13:22:31,120 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:22:31,121 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Starting migrations 
+2023-04-19 13:22:31,346 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x5e48d4e0 C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:22:31,360 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230418004535] 
+2023-04-19 13:22:31,362 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-19 13:22:31,362 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x104681ed org.postgresql.jdbc.PgConnection@104681ed]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:31,455 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-19 13:22:31,571 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-19 13:22:31,620 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-19 13:22:31,621 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x104681ed org.postgresql.jdbc.PgConnection@104681ed]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:31,672 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-19 13:22:31,807 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-19 13:22:31,834 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Up 20230418004535-add-lendings-table 
+2023-04-19 13:22:31,836 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x104681ed org.postgresql.jdbc.PgConnection@104681ed]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-19 13:22:31,947 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-19 13:22:32,014 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] DEBUG migratus.database - marking 20230418004535 complete 
+2023-04-19 13:22:32,096 [nREPL-session-66407eb3-5d85-454b-aa68-80992b3e13e0] INFO  migratus.core - Ending migrations 
+2023-04-19 13:24:54,504 [main] INFO  migratus.core - Starting migrations 
+2023-04-19 13:24:55,530 [main] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x7bcaa04a C:\Users\Misael\Documents\github\sugbi-1\resources\migrations] 
+2023-04-19 13:24:55,553 [main] INFO  migratus.core - Ending migrations 

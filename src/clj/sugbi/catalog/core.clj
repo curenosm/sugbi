@@ -15,6 +15,13 @@
 
 (def available-fields olb/relevant-fields)
 
+;; Se decidió que la lógica para determinar si un libro está disponible para
+;; prestamos, será delegada a clojure, pensando en el uso de la tabla lendings
+;; y verificando el total de ejemplares en el stock 
+(defn is-available-for-lending
+  [isbn]
+  {:available  (db/get-book {:isbn isbn})})
+
 
 (defn get-book
   [isbn fields]
