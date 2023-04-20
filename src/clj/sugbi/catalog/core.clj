@@ -23,6 +23,21 @@
   {:available  (db/get-book {:isbn isbn})})
 
 
+(defn checkout-book
+  [user-id book-item-id]
+  (db/checkout-book {:user-id user-id :book-item-id book-item-id}))
+
+
+(defn return-book
+  [user-id book-item-id]
+  (db/return-book {:user-id user-id :book-item-id book-item-id}))
+
+
+(defn get-book-lendings
+  [user-id]
+  (db/get-book-lendings{:user-id user-id}))
+
+
 (defn get-book
   [isbn fields]
   (when-let [db-book (db/get-book {:isbn isbn})]
