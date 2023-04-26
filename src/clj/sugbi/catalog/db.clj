@@ -1,10 +1,10 @@
 (ns sugbi.catalog.db
- (:require
-  [camel-snake-kebab.core :as csk]
-  [clojure.string :as str]
-  [conman.core :as conman]
-  [sugbi.db.core :as db]
-  [medley.core :as medley]))
+  (:require
+    [camel-snake-kebab.core :as csk]
+    [clojure.string :as str]
+    [conman.core :as conman]
+    [sugbi.db.core :as db]
+    [medley.core :as medley]))
 
 (conman/bind-connection db/*db* "sql/catalog.sql")
 
