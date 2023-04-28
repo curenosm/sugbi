@@ -1,4 +1,4 @@
--- :name insert-book! :! :1
+-- :name insert-book! :! :*
 insert into catalog.book (title, isbn)
 values (:title, :isbn) returning *;
 
@@ -22,8 +22,9 @@ select b.isbn as "isbn", available(b.isbn) as "available"
 from catalog.book b;
 
 -- :name checkout-book :! :*
-insert into catalog.lendings (book_id, user_id, book_item_id, lending_start)
-values (:book-id,
+insert into catalog.lendings (isbn, user_id, book_item_id, lending_start)
+values (
+        :isbn,
         :user-id,
         :book-item-id,
         now());
@@ -38,3 +39,11 @@ where user_id = :user-id
 select *
 from catalog.lendings
 where user_id = :user-id;
+
+
+--select * from catalog.book;
+--select * from catalog.book_items;
+--select * from catalog.lendings;
+--select * from user_management.librarian;
+--insert into catalog.book_items (isbn) values (1);
+--insert into catalog.lendings (isbn, user_id, book_item_id, lending_start) values (1, 1, 1, now());

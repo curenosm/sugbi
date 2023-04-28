@@ -1,8 +1,7 @@
 (ns sugbi.catalog.core
- (:require
-  [clojure.set :as set]
-  [sugbi.catalog.db :as db]
-  [sugbi.catalog.open-library-books :as olb]))
+  (:require
+    [sugbi.catalog.db :as db]
+    [sugbi.catalog.open-library-books :as olb]))
 
 
 (defn merge-on-key
@@ -13,6 +12,10 @@
        (mapv (fn [[x y]] (merge x y)))))
 
 
+(defn insert-book
+  [title isbn]
+  (db/insert-book! {:title title :isbn isbn}))
+
 (def available-fields olb/relevant-fields)
 
 ;; Se decidió que la lógica para determinar si un libro está disponible para
@@ -20,12 +23,12 @@
 ;; y verificando el total de ejemplares en el stock 
 (defn is-available-for-lending
   [isbn]
-  {:available  (db/get-book {:isbn isbn})})
+  {:available (db/get-book {:isbn isbn})})
 
 
 (defn checkout-book
-  [user-id book-item-id]
-  (db/checkout-book {:user-id user-id :book-item-id book-item-id}))
+  [isbn user-id book-item-id]
+  (db/checkout-book {:isbn isbn :user-id user-id :book-item-id book-item-id}))
 
 
 (defn return-book
@@ -35,7 +38,7 @@
 
 (defn get-book-lendings
   [user-id]
-  (db/get-book-lendings{:user-id user-id}))
+  (db/get-book-lendings {:user-id user-id}))
 
 
 (defn get-book

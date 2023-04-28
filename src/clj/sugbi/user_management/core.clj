@@ -1,9 +1,14 @@
 (ns sugbi.user-management.core
   (:require
-   [sugbi.user-management.db :as user-management.db]))
+    [sugbi.user-management.db :as db]))
 
 
 (defn is-librarian?
   [sub]
   (boolean
-   (user-management.db/get-librarian {:sub sub})))
+    (db/get-librarian {:sub sub})))
+
+
+(defn insert-librarian
+  [sub]
+  (db/insert-librarian! {:sub sub}))
