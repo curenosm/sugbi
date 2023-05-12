@@ -1,0 +1,112 @@
+
+clj꞉sugbi.user_management.core꞉> 
+(insert-librarian "hello world")
+; Syntax error compiling at (c:\Users\Misael\Documents\github\materias\sugbi\.calva\output-window\output.calva-repl:3:1).
+; Unable to resolve symbol: insert-librarian in this context
+clj꞉sugbi.user_management.core꞉> 
+(user/start)
+{:started []}
+clj꞉sugbi.user_management.core꞉> 
+(user/reset-db)
+nil
+clj꞉sugbi.user_management.core꞉> 
+is-librarian?
+; Syntax error compiling at (c:\Users\Misael\Documents\github\materias\sugbi\.calva\output-window\output.calva-repl:1:235).
+; Unable to resolve symbol: is-librarian? in this context
+clj꞉sugbi.user_management.core꞉> 
+(user/restart)
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉sugbi.user_management.core꞉> 
+(ns sugbi.user-management.core)
+nil
+clj꞉sugbi.user-management.core꞉> 
+is-librarian?
+#object[sugbi.user_management.core$is_librarian_QMARK_ 0x43a6210e "sugbi.user_management.core$is_librarian_QMARK_@43a6210e"]
+clj꞉sugbi.user-management.core꞉> 
+(insert-librarian "hello world")
+{:librarian_id 1, :sub "hello world"}
+clj꞉sugbi.user-management.core꞉> 
+(ns sugbi.catalog.core)
+nil
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29072 (form-init5805950033208735961.clj:38).
+; Wrong number of args (1) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29074 (form-init5805950033208735961.clj:42).
+; Wrong number of args (1) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(user/restart)
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29091 (form-init5805950033208735961.clj:55).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29093 (form-init5805950033208735961.clj:59).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book "1" "1" "1")
+; Execution error (ArityException) at sugbi.catalog.core/eval29095 (form-init5805950033208735961.clj:63).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29097 (form-init5805950033208735961.clj:67).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(user/restart)
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)
+; Execution error (ArityException) at sugbi.catalog.core/eval29114 (form-init5805950033208735961.clj:80).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+checkout-book
+#object[sugbi.catalog.core$checkout_book 0x1492b973 "sugbi.catalog.core$checkout_book@1492b973"]
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book "1" "1" "1")
+; Execution error (ArityException) at sugbi.catalog.core/eval29116 (form-init5805950033208735961.clj:87).
+; Wrong number of args (3) passed to: sugbi.catalog.core/checkout-book
+clj꞉sugbi.catalog.core꞉> 
+(user/start)
+{:started []}
+clj꞉sugbi.catalog.core꞉> 
+(use 'sugbi.catalog.core' :reload)
+; Execution error (FileNotFoundException) at sugbi.catalog.core/eval29120 (form-init5805950033208735961.clj:94).
+; Could not locate sugbi/catalog/core'__init.class, sugbi/catalog/core'.clj or sugbi/catalog/core'.cljc on classpath.
+clj꞉sugbi.catalog.core꞉> 
+(require 'sugbi.catalog.core' :reload-all)
+; Execution error (FileNotFoundException) at sugbi.catalog.core/eval29122 (form-init5805950033208735961.clj:98).
+; Could not locate sugbi/catalog/core'__init.class, sugbi/catalog/core'.clj or sugbi/catalog/core'.cljc on classpath.
+clj꞉sugbi.catalog.core꞉> 
+(require 'sugbi.catalog.core :reload-all)
+">> starting.. #'sugbi.config/env (namespace was recompiled)"
+"<< stopping.. #'sugbi.db.core/*db* (namespace was recompiled)"
+">> starting.. #'sugbi.db.core/*db* (namespace was recompiled)"
+nil
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)nil
+clj꞉sugbi.catalog.core꞉> 
+(checkout-book 1 1 1)
+[#:next.jdbc{:update-count 1}]
+clj꞉sugbi.catalog.core꞉> 
