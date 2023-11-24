@@ -3,3 +3,8 @@ node_modules
 log
 target
 .idea
+.joyride
+.nrepl-port
+.lein-repl-history
+.shadow-cljs
+package-lock.json
