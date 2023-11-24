@@ -1,8 +1,8 @@
 (ns sugbi.catalog.open-library-books
- (:require
-  [camel-snake-kebab.core :as csk]
-  [clj-http.client :as client]
-  [medley.core :as medley]))
+    (:require
+      [camel-snake-kebab.core :as csk]
+      [clj-http.client :as client]
+      [medley.core :as medley]))
 
 
 (def open-library-url
@@ -18,22 +18,24 @@
   [isbn]
   (let [book-url (book-by-isbn-url isbn)]
     (-> book-url
-        (client/get {:as :json})
-        :body
+        (client/get {:as :json}) :body
         (#(medley/map-keys csk/->kebab-case %)))))
 
 
 (def relevant-fields
-  #{:title               :full-title
-    :subtitle            :publishers
-    :publish-date        :weight
-    :physical-dimensions :genre
-    :subjects            :number-of-pages})
+  #{:title :full-title
+    :subtitle
+    :publishers
+    :publish-date
+    :weight
+    :physical-dimensions
+    :genre
+    :subjects
+    :number-of-pages})
 
 (defn book-info
   [isbn requested-fields]
-  (-> isbn
-      raw-book-info
+  (-> isbn raw-book-info
       (select-keys relevant-fields)
       (select-keys requested-fields)
       (assoc :isbn isbn)))
@@ -43,5 +45,4 @@
   [isbns requested-fields]
   (doall
    (map
-    #(book-info % requested-fields)
-    isbns)))
+    #(book-info % requested-fields) isbns)))

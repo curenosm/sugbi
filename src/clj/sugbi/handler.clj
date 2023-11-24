@@ -1,20 +1,20 @@
 (ns sugbi.handler
-  (:require
-    [sugbi.auth.routes :as auth]
-    [sugbi.middleware :as middleware]
-    [sugbi.layout :refer [error-page]]
-    [sugbi.routes.home :refer [home-routes]]
-    [sugbi.routes.services :refer [service-routes]]
-    [reitit.swagger-ui :as swagger-ui]
-    [reitit.ring :as ring]
-    [ring.middleware.content-type :refer [wrap-content-type]]
-    [ring.middleware.webjars :refer [wrap-webjars]]
-    [sugbi.env :refer [defaults]]
-    [mount.core :as mount]))
+    (:require
+      [sugbi.auth.routes :as auth]
+      [sugbi.middleware :as middleware]
+      [sugbi.layout :refer [error-page]]
+      [sugbi.routes.home :refer [home-routes]]
+      [sugbi.routes.services :refer [service-routes]]
+      [reitit.swagger-ui :as swagger-ui]
+      [reitit.ring :as ring]
+      [ring.middleware.content-type :refer [wrap-content-type]]
+      [ring.middleware.webjars :refer [wrap-webjars]]
+      [sugbi.env :refer [defaults]]
+      [mount.core :as mount]))
 
 (mount/defstate init-app
   :start ((or (:init defaults) (fn [])))
-  :stop  ((or (:stop defaults) (fn []))))
+  :stop ((or (:stop defaults) (fn []))))
 
 (defn- async-aware-default-handler
   ([_] nil)
@@ -39,11 +39,13 @@
      (wrap-webjars async-aware-default-handler))
     (ring/create-default-handler
      {:not-found
-      (constantly (error-page {:status 404, :title "404 - Page not found"}))
+      (constantly
+        (error-page {:status 404, :title "404 - Page not found"}))
       :method-not-allowed
       (constantly (error-page {:status 405, :title "405 - Not allowed"}))
       :not-acceptable
-      (constantly (error-page {:status 406, :title "406 - Not acceptable"}))}))))
+      (constantly
+        (error-page {:status 406, :title "406 - Not acceptable"}))}))))
 
 (defn app []
   (middleware/wrap-base #'app-routes))

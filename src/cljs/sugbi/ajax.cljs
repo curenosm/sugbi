@@ -17,14 +17,15 @@
 ;; injects transit serialization config into request options
 
 (defn as-transit [opts]
-  (merge {:format          (ajax/transit-request-format
-                             {:writer (transit/writer :json time/time-serialization-handlers)})
-          :response-format (ajax/transit-response-format
-                             {:reader (transit/reader :json time/time-deserialization-handlers)})}
-         opts))
+  (merge
+    {:format          (ajax/transit-request-format
+                       {:writer (transit/writer :json time/time-serialization-handlers)})
+     :response-format (ajax/transit-response-format
+                       {:reader (transit/reader :json time/time-deserialization-handlers)})}
+    opts))
 
 (defn load-interceptors! []
-  (swap! ajax/default-interceptors
-         conj
-         (ajax/to-interceptor {:name "default headers"
-                               :request default-headers})))
+  (swap! ajax/default-interceptors conj
+         (ajax/to-interceptor
+           {:name    "default headers"
+            :request default-headers})))

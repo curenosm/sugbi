@@ -1,8 +1,8 @@
 (ns sugbi.catalog.core
- (:require
-  [clojure.set :as set]
-  [sugbi.catalog.db :as db]
-  [sugbi.catalog.open-library-books :as olb]))
+    (:require
+      [clojure.set :as set]
+      [sugbi.catalog.db :as db]
+      [sugbi.catalog.open-library-books :as olb]))
 
 
 (defn merge-on-key
@@ -28,10 +28,7 @@
   (let [db-books                (db/get-books {})
         isbns                   (map :isbn db-books)
         open-library-book-infos (olb/multiple-book-info isbns fields)]
-    (merge-on-key
-     :isbn
-     db-books
-     open-library-book-infos)))
+    (merge-on-key :isbn db-books open-library-book-infos)))
 
 
 (defn enriched-search-books-by-title
@@ -39,7 +36,4 @@
   (let [db-book-infos           (db/matching-books title)
         isbns                   (map :isbn db-book-infos)
         open-library-book-infos (olb/multiple-book-info isbns fields)]
-    (merge-on-key
-     :isbn
-     db-book-infos
-     open-library-book-infos)))
+    (merge-on-key :isbn db-book-infos open-library-book-infos)))

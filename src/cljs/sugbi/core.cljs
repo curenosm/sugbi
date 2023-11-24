@@ -16,20 +16,22 @@
 
 (defn nav-link [uri title page]
   [:a.navbar-item
-   {:href   uri
+   {:href  uri
     :class (when (= page @(rf/subscribe [:common/page-id])) :is-active)}
    title])
 
-(defn navbar [] 
+(defn navbar []
   (r/with-let [expanded? (r/atom false)]
               [:nav.navbar.is-info>div.container
                [:div.navbar-brand
                 [:a.navbar-item {:href "/" :style {:font-weight :bold}} "sugbi"]
                 [:span.navbar-burger.burger
                  {:data-target :nav-menu
-                  :on-click #(swap! expanded? not)
-                  :class (when @expanded? :is-active)}
-                 [:span][:span][:span]]]
+                  :on-click    #(swap! expanded? not)
+                  :class       (when @expanded? :is-active)}
+                 [:span]
+                 [:span]
+                 [:span]]]
                [:div#nav-menu.navbar-menu
                 {:class (when @expanded? :is-active)}
                 [:div.navbar-start
@@ -56,17 +58,15 @@
 
 (def router
   (reitit/router
-    [["/" {:name        :home
-           :view        #'home-page
-           :controllers [{:start (fn [_] (rf/dispatch [:page/init-home]))}]}]
-     ["/about" {:name :about
-                :view #'about-page}]]))
+   [["/"
+     {:name        :home
+      :view        #'home-page
+      :controllers [{:start (fn [_] (rf/dispatch [:page/init-home]))}]}]
+    ["/about" {:name :about :view #'about-page}]]))
 
 (defn start-router! []
-  (rfe/start!
-    router
-    navigate!
-    {}))
+  (rfe/start! router navigate!
+   {}))
 
 ;; -------------------------
 ;; Initialize app
